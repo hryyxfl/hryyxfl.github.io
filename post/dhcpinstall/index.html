@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Gridea</title>
+<title>DHCPINSTALL | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://hryyxcl.github.io">Gridea</a></h3>
@@ -76,53 +77,60 @@
   </div>
 </nav>
 
-    
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          
+          <article class="article">
+            <h1>DHCPINSTALL</h1>
+            <p class="article-meta">
+              2020-09-04
+              
+            </p>
+            
+            <div class="post-content">
+              <p>Centos7部署DHCP服务<br>
+一.安装<br>
+1.yum -y install DHCP;<br>
+二.配置文件<br>
+1./etc/dhcp/dhcpd.conf<br>
+2.配置文件为空，可以在其他文件（/usr/share/doc/dhcp*/dhcpd.conf.example例子),可以从其他文件中复制的到配置文件中。<br>
+3.配置内容<br>
+Centos7部署DHCP服务<br>
+一.安装<br>
+1.yum -y install DHCP;<br>
+二.配置文件<br>
+1./etc/dhcp/dhcpd.conf<br>
+2.配置文件为空，可以在其他文件（/usr/share/doc/dhcp*/dhcpd.conf.example例子),可以从其他文件中复制的到配置文件中。<br>
+3.配置内容<br>
+网段，地址范围，域名，网关，广播地址，默认租约时间，最大租约时间<br>
+4.增加一张网卡（仅主机），用于分配地址的，IP地址和网关地址可以一样<br>
+5.在开一台虚拟机，网卡仅主机，dhcp获取，(注意IPV4_FAILURE_FATAL【如果ipv4配置失败禁用设备】要开启）<br>
+6.重启dhcp,另一台虚拟机就能获取IP地址了。</p>
+<p>网段，地址范围，域名，网关，广播地址，默认租约时间，最大租约时间<br>
+4.增加一张网卡（仅主机），用于分配地址的，IP地址和网关地址可以一样<br>
+5.在开一台虚拟机，网卡仅主机，dhcp获取，(注意IPV4_FAILURE_FATAL【如果ipv4配置失败禁用设备】要开启）<br>
+6.重启dhcp,另一台虚拟机就能获取IP地址了。</p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
-            
-              <h3 class="year" data-aos-delay="500">2020</h3>
-              
-                
-                  <article class="post">
-                    <a href="https://hryyxcl.github.io/post/dhcpinstall/">
-                      <h4 class="post-title">
-                        DHCPINSTALL
-                      </h4>
-                    </a>
-                  </article>
-                
-              
-                
-              
-            
-              <h3 class="year" data-aos-delay="500">2018</h3>
-              
-                
-              
-                
-                  <article class="post">
-                    <a href="https://hryyxcl.github.io/post/hello-gridea/">
-                      <h4 class="post-title">
-                        Hello Gridea
-                      </h4>
-                    </a>
-                  </article>
-                
-              
-            
-          </div>
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
-
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://hryyxcl.github.io/post/hello-gridea/">
+                <h3 class="post-title">
+                  Hello Gridea
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://hryyxcl.github.io/images/avatar.png?v=1599197933191" class="no-responsive avatar">
@@ -186,6 +194,8 @@
   </div>
 </div>
 
+
+    </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
